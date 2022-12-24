@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="homepage.css"/>
+    <title>主页</title>
+
+    <h3 style="color: #f1f1f1">欢迎使用</h3>
+    <style>
+        .div_top {
+            width: 100%;
+            height: 56px;
+            background: #f1f1f1;
+        }
+
+        .new-album_btn{
+            width: 33%;
+            margin-top: 25px;
+            margin-left:10px;
+            float:left;
+        }
+        .rm-album_btn{
+            width: 33%;
+            margin-top: 25px;
+            margin-left:10px;
+            float:left;
+        }
+        .show-album_btn{
+            width: 30%;
+            margin-top: 25px;
+            margin-left:10px;
+            float:left;
+        }
+        .div_title {
+            width: 100%;
+            height: 100px;
+
+            margin-top: 10px;
+        }
+
+        .div_headimage {
+            height: 100px;
+            width: 100px;
+            margin-left: 0%;
+            float: left;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="div_top">
+    <form>
+        <input type="button" class="new-album_btn" value=新建相册 onClick="location.href='create_album/create_album.html'">
+    </form>
+    <form>
+        <input type="button" class="rm-album_btn" value=删除相册 onClick="location.href='delete_album/delete_album.html'">
+    </form>
+    <form>
+        <input type="button" class="show-album_btn" value=查看所有相册 onClick="location.href='show_album/show_album.php'">
+    </form>
+</div>
+
+<div class="div_title">
+    <form>
+        <input type="image"
+               src="1.png"
+               class="div_headimage">
+    </form>
+</div>
+
+<div>
+    <form action="handle.php" method="POST">
+        <p>输入待访问的相册的用户名<input type="text" name="Username">
+            <input type="submit" name="submit" value="提交">
+        </p>
+    </form>
+</div>
+</body>
+</html>

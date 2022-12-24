@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建相册页面</title>
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+
+<body>
+<div id="login_frame">
+    <form action="create_album.php" method="POST">
+        <p>输入相册名<input type="text" name="name"></p>
+        <p>选择相册权限
+            <input type="checkbox" name="power" value="public">公开
+            <input type="checkbox" name="power" value="private">私密
+        </p>
+        <input type="submit" name="submit" value="提交">
+    </form>
+</div>
+
+</body>
+</html>

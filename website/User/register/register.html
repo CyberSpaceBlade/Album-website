@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册用户</title>
+    <link rel="stylesheet" type="text/css" href="register.css"/>
+</head>
+<body>
+<div id="register_frame">
+    <form action="register.php" method="POST">
+        <p> 用户名：<input type="text" name="user"></p>
+        <p> 密  码： <input type="password" name="pass" id="pw1"></p>
+        <p> 确认密码： <input type="password" onkeyup="validate()" name="pass_confirm" id="pw2"><span id="tis hi"> </span></p>
+        <input type="submit" name="submit" value="注册">
+        <script>
+            function validate() {
+                var pw1 = document.getElementById("pw1").value;
+                var pw2 = document.getElementById("pw2").value;
+                if(pw1 == pw2) {
+                    document.getElementById("tis hi").innerHTML="<font color='green'>两次密码相同</font>";
+                    document.getElementById("submit").disabled = false;
+                }
+                else {
+                    document.getElementById("tis hi").innerHTML="<font color='red'>两次密码不相同</font>";
+                    document.getElementById("submit").disabled = true;
+                }
+            }
+        </script>
+    </form>
+
+</div>
+</body>
+</html>

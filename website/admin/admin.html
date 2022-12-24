@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>管理员登录</title>
+</head>
+<body>
+<script>
+  //用户名和密码不能为空
+  function checkform() {
+    $user_name = document.getElementById("username").value;
+    $user_pwd = document.getElementById("password").value;
+    if ($user_name == '') {
+      alert("用户名不能为空");
+      window.location.href = 'admin.html';
+    }
+
+    if ($user_pwd == '') {
+      alert("密码不能为空");
+      window.location.href = 'admin.html';
+    }
+  }
+</script>
+</body>
+<body>
+  <form method="POST" action="login.php" align="center">
+    <h1>管理员登录</h1>
+    用户名：<input type="text" name="adminusername" id="username" placeholder="请输入用户名"><br/>
+    密　码：<input type="password" name="adminpassword" id="password" placeholder="请输入密码"><br>
+    <input type="submit"value="登录" onclick="checkform()">
+  </form>
+<p>
+</body>
+</html>

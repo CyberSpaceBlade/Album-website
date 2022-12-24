@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!--gallery画廊-->
+<div class="gallery-section">
+  <div class="inner-width">
+    <h1>My Gallery</h1>
+    <div class="border"></div>
+    <div class="gallery">
+    </div>
+  </div>
+</div>
+<script>
+  $(".gallery").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{
+      enabled: true
+    }
+  });
+</script>
+<a href="upload.php"><button>点我进行相片上传</button></a>
+<a href="delete/delete.html"><button>点我进行相片删除</button></a>
+<a href="search/search.html"><button>点我进行相片查找</button></a>
+<a href="liuyan/liuyan.php"><button>点我进入相册留言板</button></a>
+</body>
+</html>
